@@ -1,0 +1,13 @@
+#!/bin/bash
+
+#need to revise logging system
+echo "Here is your current location: $PWD"
+#cd $PWD
+read -r -p "Type your commit message using _ between words: " commitMessage
+echo
+
+echo ${commitMessage}
+echo
+	git add -A && git commit -m "${commitMessage}" && git push origin main 2> giterr.txt
+
+echo "program terminated successfully" > myscriptsLog.txt 
