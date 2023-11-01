@@ -2,13 +2,12 @@
 
 #need to revise logging system
 echo "Here is your current location: $PWD"
-
+#cd $PWD
 read -r -p "Type your commit message using _ between words: " commitMessage
 echo
 
 echo ${commitMessage}
 echo
-#logging is bad. need to fix
-	git add -A && git commit -m "${commitMessage}" && git push origin main 2> giterr.txt
-#logging is bad. need to fix
-echo "program terminated successfully" > myscriptsLog.txt 
+	git add -A && git commit -m "${commitMessage}" && git push origin main
+
+	echo "program terminated successfully $(date -u)" >> myscriptsLog.txt 
