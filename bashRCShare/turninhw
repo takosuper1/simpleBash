@@ -8,6 +8,7 @@ echo
 
 echo ${commitMessage}
 echo
+#logging is bad. need to fix
 	git add -A && git commit -m "${commitMessage}" && git push origin main 2> giterr.txt
-
+#logging is bad. need to fix
 echo "program terminated successfully" > myscriptsLog.txt 
